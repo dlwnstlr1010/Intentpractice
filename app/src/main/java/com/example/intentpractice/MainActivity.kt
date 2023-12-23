@@ -1,5 +1,6 @@
 package com.example.intentpractice
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,6 +14,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate((layoutInflater))
         setContentView(binding.root)
 
+        binding.moveToOther.setOnClickListener {
+            //다른 화면으로 이동하자 otheractivity로
+            val myIntent = Intent(this, OtherActivity::class.java)
+            startActivity(myIntent)
+        }
 
 
 
